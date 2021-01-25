@@ -1,0 +1,12 @@
+<section class="section">
+    <div class="container">
+        <h1 class="title">{{article.title}}</h1>
+        <p>{{stripTags article.content}}</p>
+
+        {{#if user}}
+        <form action="/articles/edit/{{this._id}}">
+            <button class="button is-link" style="margin-top: 15px;" type="submit">Edit</button>
+        </form>
+        {{/if}}
+    </div>
+</section>
